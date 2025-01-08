@@ -10,10 +10,13 @@ import IconSelector from "./icons/IconSelector";
 
 document.addEventListener("DOMContentLoaded", () => {
 	const accordions = document.querySelectorAll(".aspect-accordion");
+	console.log(accordions);
 
 	accordions.forEach((container) => {
+		console.log(container);
 		try {
 			const dataElement = container.querySelector(".aspect-accordion-data");
+			console.log(dataElement);
 			if (!dataElement) return;
 
 			const accordionID = dataElement.getAttribute("data-accordion-id");
@@ -31,6 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
 				.then((data) => {
 					const mainData = data.data[0];
 					const accordionData = mainData?.content;
+					const accordionTitle = mainData?.title;
 
 					if (mainData.status === "publish") {
 						// Render the Accordion component with fetched data
@@ -95,7 +99,8 @@ document.addEventListener("DOMContentLoaded", () => {
 							</Accordion>,
 							container
 						);
-					} else {
+					}
+					if (mainData.status !== "publish") {
 						ReactDOM.render(
 							<div>Please publish your accordion first</div>,
 							container
