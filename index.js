@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			const accordionID = dataElement.getAttribute("data-accordion-id");
 
 			// Fetch accordion data
-			fetch(`http://localhost:3000/api/accordion/fetch-data?id=${accordionID}`)
+			fetch(`http://accordion-editor.nafisbd.com/api/accordion/fetch-data?id=${accordionID}`)
 				.then((response) => {
 					if (!response.ok) {
 						throw new Error(`HTTP error! Status: ${response.status}`);
