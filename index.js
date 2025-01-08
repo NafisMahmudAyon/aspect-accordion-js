@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 			// Fetch accordion data
 			fetch(
-				`http://accordion-editor.nafisbd.com/api/accordion/fetch-data?id=${accordionID}`
+				`https://accordion-editor.nafisbd.com/api/accordion/fetch-data?id=${accordionID}`
 			)
 				.then((response) => {
 					if (!response.ok) {
