@@ -92,7 +92,8 @@ document.addEventListener("DOMContentLoaded", () => {
               container
             );
           }
-					elseReactDOM.render(
+					else
+            ReactDOM.render(
 						<div>Please publish your accordion first</div>,
 						container
 					);
