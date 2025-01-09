@@ -11,13 +11,10 @@ import './tailwind.js'
 
 document.addEventListener("DOMContentLoaded", () => {
 	const accordions = document.querySelectorAll(".aspect-accordion");
-	// console.log(accordions);
 
 	accordions.forEach((container) => {
-		// console.log(container);
 		try {
 			const dataElement = container.querySelector(".aspect-accordion-data");
-			// console.log(dataElement);
 			if (!dataElement) return;
 
 			const accordionID = dataElement.getAttribute("data-accordion-id");
